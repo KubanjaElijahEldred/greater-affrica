@@ -3,7 +3,7 @@ import { FaInstagram } from 'react-icons/fa';
 
 const contactItems = [
   { icon: MapPin, label: 'Visit us', value: 'Kampala, Uganda' },
-  { icon: Phone, label: 'Main contact', value: '+256 771 964 723', href: 'tel:+256771964723' },
+  { icon: Phone, label: 'C.E.O contact', value: '+256 771 964 723', href: 'tel:+256771964723' },
   { icon: Phone, label: 'Project contact', value: '+256 778 892 356', href: 'tel:+256778892356' },
   { icon: FaInstagram, label: 'Instagram', value: '@greater__africa_org', href: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius' },
 ];
@@ -56,7 +56,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
             <div>
               <label htmlFor="name">Full name</label>
               <input id="name" type="text" placeholder="Your name" />

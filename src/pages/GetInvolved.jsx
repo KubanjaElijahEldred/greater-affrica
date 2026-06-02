@@ -80,7 +80,7 @@ const GetInvolved = () => {
             <div className="donation-contacts">
               <a href="tel:+256771964723">
                 <Phone size={18} />
-                Majiak: +256 771 964 723
+                Benita Kaija: +256 771 964 723
               </a>
               <a href="tel:+256778892356">
                 <Phone size={18} />

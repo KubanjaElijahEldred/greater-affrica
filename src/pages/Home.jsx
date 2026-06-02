@@ -12,6 +12,7 @@ import {
   Share2,
   Users,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const missionCards = [
   {
@@ -70,12 +71,12 @@ const Home = () => {
               Greater Africa Organisation is dedicated to improving the lives of those in need in Uganda through various charitable causes.
             </p>
             <div className="hero-reference__actions">
-              <a className="btn btn-orange" href="/get-involved">
+              <Link className="btn btn-orange" to="/get-involved">
                 DONATE NOW <Heart size={17} fill="currentColor" />
-              </a>
-              <button className="btn btn-outline-white">
+              </Link>
+              <Link className="btn btn-outline-white" to="/about">
                 LEARN MORE <ChevronRight size={18} />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -93,9 +94,9 @@ const Home = () => {
             <p className="section-copy">
               We focus on sustainable development and community empowerment to create lasting change. From education and healthcare to food security and clean water, we are committed to a brighter future for communities in need.
             </p>
-            <button className="btn btn-green">
+            <Link className="btn btn-green" to="/about">
               ABOUT US <ChevronRight size={18} />
-            </button>
+            </Link>
           </div>
 
           <div className="mission-cards">
@@ -157,9 +158,9 @@ const Home = () => {
                 </article>
               ))}
             </div>
-            <a className="btn btn-orange" href="/get-involved">
+            <Link className="btn btn-orange" to="/get-involved">
               GET INVOLVED <ChevronRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -12,7 +12,7 @@ const teamMembers = [
     name: 'Benita Kaija',
     role: 'C.E.O',
     image: '/images/benita.png',
-    contact: '',
+    contact: '+256 771 964 723',
     instagram: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius',
   },
   {
@@ -20,13 +20,6 @@ const teamMembers = [
     role: 'Project Manager & Co Admin',
     image: '/images/wei.png',
     contact: '+256 778 892 356',
-    instagram: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius',
-  },
-  {
-    name: 'Majiak',
-    role: 'Main Contact',
-    image: '/images/image.png',
-    contact: '+256 771 964 723',
     instagram: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius',
   },
 ];

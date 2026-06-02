@@ -171,8 +171,9 @@ img {
 }
 
 .site-header .container {
-  width: min(100%, 1480px);
-  padding: 0 36px;
+  width: 100%;
+  max-width: none;
+  padding: 0 clamp(18px, 2.2vw, 42px);
 }
 
 .site-header__inner {
@@ -180,15 +181,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 34px;
-  width: min(100%, 1480px);
+  gap: clamp(16px, 1.7vw, 30px);
+  width: 100%;
 }
 
 .brand-logo {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  min-width: 310px;
+  min-width: 300px;
 }
 
 .brand-logo__image {
@@ -235,18 +236,79 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(14px, 1.45vw, 28px);
+  gap: clamp(10px, 1vw, 22px);
   flex: 1;
-  max-width: 850px;
+  max-width: 790px;
 }
 
 .site-nav a,
 .mobile-nav a {
   position: relative;
   color: #151719;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.site-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: clamp(170px, 15vw, 260px);
+  min-height: 42px;
+  padding: 0 13px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: #fffdf8;
+  color: var(--primary-green);
+}
+
+.site-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-main);
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.site-search input::placeholder {
+  color: #7b827c;
+}
+
+.site-search__results {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.site-search__results a {
+  padding: 12px 14px;
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.site-search__results a:hover {
+  background: #eef6e8;
+  color: var(--primary-green);
+}
+
+.mobile-search {
+  display: none;
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .site-nav a {
@@ -1446,7 +1508,8 @@ img {
 
 @media (max-width: 1180px) {
   .site-nav,
-  .donate-nav {
+  .donate-nav,
+  .desktop-search {
     display: none;
   }
 
@@ -1458,6 +1521,10 @@ img {
   .mobile-panel {
     display: block;
     padding: 16px 0 22px;
+  }
+
+  .mobile-search {
+    display: flex;
   }
 
   .mobile-nav {
