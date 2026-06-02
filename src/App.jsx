@@ -8,6 +8,10 @@ import SplashScreen from './components/SplashScreen';
 import Home from './pages/Home';
 import Causes from './pages/Causes';
 import About from './pages/About';
+import Impact from './pages/Impact';
+import GetInvolved from './pages/GetInvolved';
+import News from './pages/News';
+import Contact from './pages/Contact';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,6 +37,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/causes" element={<Causes />} />
             <Route path="/about" element={<About />} />
+            <Route path="/impact" element={<Impact />} />
+            <Route path="/get-involved" element={<GetInvolved />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
       </AnimatePresence>

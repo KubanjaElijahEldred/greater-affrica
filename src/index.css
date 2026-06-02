@@ -741,6 +741,299 @@ img {
   color: var(--light-green);
 }
 
+.page-section {
+  background: var(--bg-warm);
+  padding: 76px 0;
+}
+
+.section-heading-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 34px;
+}
+
+.cause-grid,
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.cause-card,
+.news-grid article,
+.involvement-page-grid article,
+.stat-card-grid article,
+.timeline-grid article {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.cause-card > img,
+.news-grid article > img {
+  width: 100%;
+  height: 224px;
+  object-fit: cover;
+}
+
+.cause-card > div,
+.news-grid article > div {
+  padding: 26px;
+}
+
+.cause-card span,
+.involvement-page-grid span,
+.contact-info-grid span {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #eef6e8;
+  color: var(--primary-green);
+}
+
+.cause-card h3,
+.news-grid h3,
+.involvement-page-grid h3,
+.timeline-grid h3 {
+  margin-bottom: 10px;
+  color: var(--text-main);
+  font-size: 22px;
+  line-height: 1.16;
+}
+
+.cause-card p,
+.news-grid p,
+.involvement-page-grid p,
+.timeline-grid p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.cause-card a,
+.news-grid a,
+.involvement-page-grid a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: var(--primary-green);
+  font-weight: 800;
+}
+
+.impact-detail-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1.18fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.stat-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.stat-card-grid article {
+  min-height: 178px;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  padding: 28px;
+  color: var(--primary-green);
+}
+
+.stat-card-grid strong {
+  color: var(--text-main);
+  font-size: 38px;
+  line-height: 1;
+}
+
+.stat-card-grid span {
+  color: var(--text-muted);
+  font-weight: 800;
+}
+
+.story-panel-section {
+  background: var(--white);
+  padding: 70px 0;
+}
+
+.story-panel {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.86fr) minmax(0, 1.14fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.story-panel img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.story-panel h2 {
+  max-width: 700px;
+  margin: 10px 0 18px;
+  font-size: clamp(34px, 4vw, 50px);
+  line-height: 1.04;
+}
+
+.story-panel p:last-child {
+  max-width: 650px;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1.66;
+}
+
+.timeline-grid,
+.involvement-page-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.timeline-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.timeline-grid article,
+.involvement-page-grid article {
+  min-height: 250px;
+  padding: 30px;
+}
+
+.timeline-grid article > span {
+  display: inline-flex;
+  margin-bottom: 20px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--primary-green);
+  color: var(--white);
+  font-weight: 800;
+}
+
+.timeline-grid svg {
+  color: var(--accent-orange);
+  margin-bottom: 14px;
+}
+
+.donation-band {
+  background: var(--primary-dark);
+  color: var(--white);
+  padding: 52px 0;
+}
+
+.donation-band__inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 28px;
+  align-items: center;
+}
+
+.donation-band h2 {
+  max-width: 780px;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.06;
+}
+
+.donation-band svg {
+  color: var(--light-green);
+}
+
+.news-grid span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: var(--primary-green);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.contact-info-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-info-grid article {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.contact-info-grid span {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.contact-info-grid strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--text-main);
+}
+
+.contact-info-grid p {
+  color: var(--text-muted);
+}
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+  padding: 34px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-main);
+  font-weight: 800;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: #fffdf8;
+  color: var(--text-main);
+  outline: none;
+}
+
+.contact-form input {
+  min-height: 50px;
+  padding: 0 16px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  padding: 14px 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(28, 93, 44, 0.12);
+}
+
 .site-footer {
   background: linear-gradient(90deg, #0f3a1d, #0e3218);
   color: var(--white);
@@ -988,6 +1281,12 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .cause-grid,
+  .news-grid,
+  .involvement-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1029,14 +1328,20 @@ img {
 
   .mission-grid,
   .involved-grid,
-  .about-story__grid {
+  .about-story__grid,
+  .section-heading-row,
+  .impact-detail-grid,
+  .contact-grid,
+  .story-panel {
     grid-template-columns: 1fr;
     gap: 36px;
   }
 
   .impact-stats,
   .involvement-actions,
-  .values-grid {
+  .values-grid,
+  .stat-card-grid,
+  .timeline-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1071,6 +1376,10 @@ img {
   }
 
   .about-mission-band__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-band__inner {
     grid-template-columns: 1fr;
   }
 }
@@ -1125,7 +1434,12 @@ img {
   .impact-stats,
   .involvement-actions,
   .values-grid,
-  .footer-grid {
+  .footer-grid,
+  .cause-grid,
+  .news-grid,
+  .involvement-page-grid,
+  .stat-card-grid,
+  .timeline-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1160,7 +1474,19 @@ img {
   .about-story,
   .values-section,
   .mission-section,
-  .involved-section {
+  .involved-section,
+  .page-section,
+  .story-panel-section {
     padding: 54px 0;
+  }
+
+  .cause-card > img,
+  .news-grid article > img,
+  .story-panel img {
+    height: 270px;
+  }
+
+  .contact-form {
+    padding: 24px 18px;
   }
 }

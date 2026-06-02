@@ -1,7 +1,14 @@
 import { Heart, Mail, Map, MapPin, Phone } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
-const quickLinks = ['Home', 'About Us', 'Our Causes', 'Impact', 'Get Involved', 'Contact'];
+const quickLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Our Causes', href: '/causes' },
+  { label: 'Impact', href: '/impact' },
+  { label: 'Get Involved', href: '/get-involved' },
+  { label: 'Contact', href: '/contact' },
+];
 const causes = ['Education', 'Healthcare', 'Food Security', 'Clean Water', 'Community Development'];
 const socials = [FaFacebookF, FaTwitter, FaInstagram, FaYoutube];
 
@@ -36,8 +43,8 @@ const Footer = () => {
             <h3>QUICK LINKS</h3>
             <ul>
               {quickLinks.map((link) => (
-                <li key={link}>
-                  <a href={link === 'Home' ? '/' : `/${link.toLowerCase().replaceAll(' ', '-')}`}>{link}</a>
+                <li key={link.label}>
+                  <a href={link.href}>{link.label}</a>
                 </li>
               ))}
             </ul>
