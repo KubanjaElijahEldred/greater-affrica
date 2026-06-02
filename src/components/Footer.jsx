@@ -1,4 +1,4 @@
-import { Heart, Mail, Map, MapPin, Phone } from 'lucide-react';
+import { Heart, Mail, MapPin, Phone } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 const quickLinks = [
@@ -19,9 +19,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <span aria-hidden="true">
-                <Map size={38} fill="currentColor" strokeWidth={1} />
-              </span>
+              <img src="/images/image.png" alt="Greater Africa Organisation logo" />
               <strong>
                 GREATER AFRICA
                 <b>ORGANISATION</b>

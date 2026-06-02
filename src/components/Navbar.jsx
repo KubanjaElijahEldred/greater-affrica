@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Heart, Map, Menu, X } from 'lucide-react';
+import { Heart, Menu, X } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -14,10 +14,7 @@ const navLinks = [
 
 const BrandLogo = () => (
   <Link className="brand-logo" to="/">
-    <span className="brand-logo__mark" aria-hidden="true">
-      <Map size={52} fill="currentColor" strokeWidth={1} />
-      <Heart size={20} fill="currentColor" strokeWidth={0} />
-    </span>
+    <img className="brand-logo__image" src="/images/image.png" alt="Greater Africa Organisation logo" />
     <span className="brand-logo__text">
       <strong>GREATER AFRICA</strong>
       <strong>ORGANISATION</strong>
