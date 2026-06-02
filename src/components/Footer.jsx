@@ -1,5 +1,5 @@
 import { Heart, MapPin, Phone } from 'lucide-react';
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 
 const quickLinks = [
   { label: 'Home', href: '/' },
@@ -8,14 +8,12 @@ const quickLinks = [
   { label: 'Impact', href: '/impact' },
   { label: 'Get Involved', href: '/get-involved' },
   { label: 'Team', href: '/team' },
+  { label: 'News', href: '/news' },
   { label: 'Contact', href: '/contact' },
 ];
 const causes = ['Education', 'Healthcare', 'Food Security', 'Clean Water', 'Community Development'];
 const socials = [
-  { icon: FaFacebookF, href: '#', label: 'Facebook profile' },
-  { icon: FaTwitter, href: '#', label: 'Twitter profile' },
   { icon: FaInstagram, href: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius', label: 'Instagram profile' },
-  { icon: FaYoutube, href: '#', label: 'YouTube profile' },
 ];
 
 const Footer = () => {
@@ -36,7 +34,7 @@ const Footer = () => {
             </p>
             <div className="social-links">
               {socials.map(({ icon: Icon, href, label }) => (
-                <a key={label} href={href} aria-label={label} target={href === '#' ? undefined : '_blank'} rel={href === '#' ? undefined : 'noreferrer'}>
+                <a key={label} href={href} aria-label={label} target="_blank" rel="noreferrer">
                   <Icon size={15} />
                 </a>
               ))}

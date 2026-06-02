@@ -84,7 +84,7 @@ const GetInvolved = () => {
               </a>
               <a href="tel:+256778892356">
                 <Phone size={18} />
-                Deogratius Wiyacungu: +256 778 892 356
+                Wei Belle: +256 778 892 356
               </a>
               <a href="https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius" target="_blank" rel="noreferrer">
                 <FaInstagram size={18} />
