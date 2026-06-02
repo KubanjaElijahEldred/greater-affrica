@@ -8,6 +8,7 @@ const navLinks = [
   { name: 'Our Causes', path: '/causes' },
   { name: 'Impact', path: '/impact' },
   { name: 'Get Involved', path: '/get-involved' },
+  { name: 'Team', path: '/team' },
   { name: 'News', path: '/news' },
   { name: 'Contact', path: '/contact' },
 ];

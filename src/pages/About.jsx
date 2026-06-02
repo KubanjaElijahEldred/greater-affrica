@@ -11,18 +11,21 @@ const teamMembers = [
   {
     name: 'Benita Kaija',
     role: 'C.E.O',
+    image: '/images/benita.png',
     contact: '',
     instagram: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius',
   },
   {
-    name: 'Deogratius Wiyacungu',
+    name: 'Wei Belle',
     role: 'Project Manager & Co Admin',
+    image: '/images/wei.png',
     contact: '+256 778 892 356',
     instagram: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius',
   },
   {
     name: 'Majiak',
     role: 'Main Contact',
+    image: '/images/image.png',
     contact: '+256 771 964 723',
     instagram: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius',
   },
@@ -103,7 +106,7 @@ const About = () => {
             {teamMembers.map((member) => (
               <article className="team-card" key={member.name}>
                 <div className="team-card__photo">
-                  <img src="/images/image.png" alt={`${member.name} profile placeholder`} />
+                  <img src={member.image} alt={member.name} />
                 </div>
                 <h3>{member.name}</h3>
                 <p>{member.role}</p>

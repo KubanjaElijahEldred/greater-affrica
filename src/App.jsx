@@ -12,6 +12,7 @@ import Impact from './pages/Impact';
 import GetInvolved from './pages/GetInvolved';
 import News from './pages/News';
 import Contact from './pages/Contact';
+import Team from './pages/Team';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -39,6 +40,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/get-involved" element={<GetInvolved />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/news" element={<News />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

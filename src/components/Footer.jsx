@@ -7,6 +7,7 @@ const quickLinks = [
   { label: 'Our Causes', href: '/causes' },
   { label: 'Impact', href: '/impact' },
   { label: 'Get Involved', href: '/get-involved' },
+  { label: 'Team', href: '/team' },
   { label: 'Contact', href: '/contact' },
 ];
 const causes = ['Education', 'Healthcare', 'Food Security', 'Clean Water', 'Community Development'];
