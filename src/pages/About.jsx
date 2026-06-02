@@ -1,9 +1,31 @@
-import { BookOpen, Heart, ShieldCheck, Sprout, Users } from 'lucide-react';
+import { BookOpen, Heart, Phone, ShieldCheck, Sprout, Users } from 'lucide-react';
+import { FaInstagram } from 'react-icons/fa';
 
 const values = [
   { icon: Heart, label: 'Compassion', text: 'We meet urgent needs with care, dignity, and practical support.' },
   { icon: Sprout, label: 'Sustainability', text: 'We invest in community-led solutions that can keep growing.' },
   { icon: ShieldCheck, label: 'Trust', text: 'We work transparently with partners, families, and volunteers.' },
+];
+
+const teamMembers = [
+  {
+    name: 'Benita Kaija',
+    role: 'C.E.O',
+    contact: '',
+    instagram: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius',
+  },
+  {
+    name: 'Deogratius Wiyacungu',
+    role: 'Project Manager & Co Admin',
+    contact: '+256 778 892 356',
+    instagram: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius',
+  },
+  {
+    name: 'Majiak',
+    role: 'Main Contact',
+    contact: '+256 771 964 723',
+    instagram: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius',
+  },
 ];
 
 const About = () => {
@@ -59,6 +81,44 @@ const About = () => {
                 <value.icon size={42} />
                 <h3>{value.label}</h3>
                 <p>{value.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="team-section">
+        <div className="container">
+          <div className="section-heading-row">
+            <div>
+              <p className="eyebrow">MEET THE TEAM</p>
+              <h2 className="heading-main">The people helping move the mission forward.</h2>
+            </div>
+            <p className="section-copy">
+              Our team and partners coordinate community support, project planning, communication, and direct outreach.
+            </p>
+          </div>
+
+          <div className="team-grid">
+            {teamMembers.map((member) => (
+              <article className="team-card" key={member.name}>
+                <div className="team-card__photo">
+                  <img src="/images/image.png" alt={`${member.name} profile placeholder`} />
+                </div>
+                <h3>{member.name}</h3>
+                <p>{member.role}</p>
+                <div className="team-card__links">
+                  {member.contact && (
+                    <a href={`tel:${member.contact.replaceAll(' ', '')}`}>
+                      <Phone size={17} />
+                      {member.contact}
+                    </a>
+                  )}
+                  <a href={member.instagram} target="_blank" rel="noreferrer">
+                    <FaInstagram size={18} />
+                    Instagram
+                  </a>
+                </div>
               </article>
             ))}
           </div>

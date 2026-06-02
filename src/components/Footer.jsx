@@ -1,4 +1,4 @@
-import { Heart, Mail, MapPin, Phone } from 'lucide-react';
+import { Heart, MapPin, Phone } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 const quickLinks = [
@@ -10,7 +10,12 @@ const quickLinks = [
   { label: 'Contact', href: '/contact' },
 ];
 const causes = ['Education', 'Healthcare', 'Food Security', 'Clean Water', 'Community Development'];
-const socials = [FaFacebookF, FaTwitter, FaInstagram, FaYoutube];
+const socials = [
+  { icon: FaFacebookF, href: '#', label: 'Facebook profile' },
+  { icon: FaTwitter, href: '#', label: 'Twitter profile' },
+  { icon: FaInstagram, href: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius', label: 'Instagram profile' },
+  { icon: FaYoutube, href: '#', label: 'YouTube profile' },
+];
 
 const Footer = () => {
   return (
@@ -29,8 +34,8 @@ const Footer = () => {
               We are committed to improving lives and building stronger communities in Uganda through compassion, empowerment, and sustainable solutions.
             </p>
             <div className="social-links">
-              {socials.map((Icon, index) => (
-                <a key={index} href="#" aria-label="Social profile">
+              {socials.map(({ icon: Icon, href, label }) => (
+                <a key={label} href={href} aria-label={label} target={href === '#' ? undefined : '_blank'} rel={href === '#' ? undefined : 'noreferrer'}>
                   <Icon size={15} />
                 </a>
               ))}
@@ -63,8 +68,9 @@ const Footer = () => {
             <h3>CONTACT US</h3>
             <ul className="contact-list">
               <li><MapPin size={16} />Kampala, Uganda</li>
-              <li><Phone size={16} />+256 700 123 456</li>
-              <li><Mail size={16} />info@greaterafricaorganisation.org</li>
+              <li><Phone size={16} />+256 771 964 723</li>
+              <li><Phone size={16} />+256 778 892 356</li>
+              <li><FaInstagram size={16} />@greater__africa_org</li>
             </ul>
             <h3>STAY UPDATED</h3>
             <form className="newsletter-form">

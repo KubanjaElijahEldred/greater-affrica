@@ -70,9 +70,9 @@ const Home = () => {
               Greater Africa Organisation is dedicated to improving the lives of those in need in Uganda through various charitable causes.
             </p>
             <div className="hero-reference__actions">
-              <button className="btn btn-orange">
+              <a className="btn btn-orange" href="/get-involved">
                 DONATE NOW <Heart size={17} fill="currentColor" />
-              </button>
+              </a>
               <button className="btn btn-outline-white">
                 LEARN MORE <ChevronRight size={18} />
               </button>
@@ -157,9 +157,9 @@ const Home = () => {
                 </article>
               ))}
             </div>
-            <button className="btn btn-orange">
+            <a className="btn btn-orange" href="/get-involved">
               GET INVOLVED <ChevronRight size={18} />
-            </button>
+            </a>
           </div>
         </div>
       </section>

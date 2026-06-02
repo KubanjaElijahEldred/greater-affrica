@@ -1,9 +1,11 @@
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { MapPin, Phone, Send } from 'lucide-react';
+import { FaInstagram } from 'react-icons/fa';
 
 const contactItems = [
   { icon: MapPin, label: 'Visit us', value: 'Kampala, Uganda' },
-  { icon: Phone, label: 'Call us', value: '+256 700 123 456' },
-  { icon: Mail, label: 'Email us', value: 'info@greaterafricaorganisation.org' },
+  { icon: Phone, label: 'Main contact', value: '+256 771 964 723', href: 'tel:+256771964723' },
+  { icon: Phone, label: 'Project contact', value: '+256 778 892 356', href: 'tel:+256778892356' },
+  { icon: FaInstagram, label: 'Instagram', value: '@greater__africa_org', href: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius' },
 ];
 
 const Contact = () => {
@@ -41,7 +43,13 @@ const Contact = () => {
                   </span>
                   <div>
                     <strong>{item.label}</strong>
-                    <p>{item.value}</p>
+                    {item.href ? (
+                      <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noreferrer' : undefined}>
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p>{item.value}</p>
+                    )}
                   </div>
                 </article>
               ))}

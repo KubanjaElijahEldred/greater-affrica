@@ -1,4 +1,5 @@
-import { ArrowRight, Gift, HandHeart, Handshake, Heart, Share2 } from 'lucide-react';
+import { ArrowRight, Gift, HandHeart, Handshake, Heart, Phone, Share2 } from 'lucide-react';
+import { FaInstagram } from 'react-icons/fa';
 
 const ways = [
   {
@@ -76,8 +77,22 @@ const GetInvolved = () => {
           <div>
             <p className="eyebrow eyebrow--light">DONATE NOW</p>
             <h2>Help us build a better Uganda, one family at a time.</h2>
+            <div className="donation-contacts">
+              <a href="tel:+256771964723">
+                <Phone size={18} />
+                Majiak: +256 771 964 723
+              </a>
+              <a href="tel:+256778892356">
+                <Phone size={18} />
+                Deogratius Wiyacungu: +256 778 892 356
+              </a>
+              <a href="https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius" target="_blank" rel="noreferrer">
+                <FaInstagram size={18} />
+                @greater__africa_org
+              </a>
+            </div>
           </div>
-          <button className="btn btn-orange">DONATE NOW</button>
+          <a className="btn btn-orange" href="/contact">CONTACT US</a>
         </div>
       </section>
     </div>

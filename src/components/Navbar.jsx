@@ -50,10 +50,10 @@ const Navbar = () => {
       <div className="container site-header__inner">
         <BrandLogo />
         {renderLinks('site-nav')}
-        <button className="btn btn-orange donate-nav">
+        <Link className="btn btn-orange donate-nav" to="/get-involved">
           <Heart size={16} fill="currentColor" />
           DONATE NOW
-        </button>
+        </Link>
         <button
           className="menu-toggle"
           aria-label="Toggle menu"
@@ -67,10 +67,10 @@ const Navbar = () => {
         <div className="mobile-panel">
           <div className="container">
             {renderLinks('mobile-nav')}
-            <button className="btn btn-orange">
+            <Link className="btn btn-orange" to="/get-involved" onClick={() => setMenuOpen(false)}>
               <Heart size={16} fill="currentColor" />
               DONATE NOW
-            </button>
+            </Link>
           </div>
         </div>
       )}

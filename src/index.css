@@ -53,6 +53,7 @@ ul {
 img {
   display: block;
   max-width: 100%;
+  image-rendering: auto;
 }
 
 .container {
@@ -321,14 +322,15 @@ img {
 
 .hero-reference__image {
   object-position: 67% center;
+  filter: none;
 }
 
 .hero-reference__shade {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(3, 7, 4, 0.84) 0%, rgba(3, 7, 4, 0.55) 39%, rgba(3, 7, 4, 0.12) 70%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.1));
+    linear-gradient(90deg, rgba(3, 7, 4, 0.74) 0%, rgba(3, 7, 4, 0.42) 39%, rgba(3, 7, 4, 0.04) 72%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.04));
 }
 
 .hero-reference__content {
@@ -457,7 +459,7 @@ img {
 }
 
 .impact-band__overlay {
-  background: rgba(6, 42, 14, 0.84);
+  background: rgba(6, 42, 14, 0.72);
 }
 
 .impact-band__content {
@@ -535,7 +537,7 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.02);
 }
 
 .play-button {
@@ -611,7 +613,7 @@ img {
 }
 
 .page-hero__overlay {
-  background: linear-gradient(90deg, rgba(6, 42, 14, 0.86), rgba(6, 42, 14, 0.48));
+  background: linear-gradient(90deg, rgba(6, 42, 14, 0.74), rgba(6, 42, 14, 0.28));
 }
 
 .page-hero__content {
@@ -707,6 +709,77 @@ img {
 .values-grid p {
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+.team-section {
+  background: var(--bg-warm);
+  padding: 76px 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.team-card {
+  min-height: 360px;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  padding: 34px 28px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.team-card__photo {
+  width: 148px;
+  height: 148px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+  overflow: hidden;
+  border: 6px solid #eef6e8;
+  border-radius: 50%;
+  background: var(--primary-dark);
+}
+
+.team-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none;
+}
+
+.team-card h3 {
+  margin-bottom: 6px;
+  color: var(--text-main);
+  font-size: 25px;
+  line-height: 1.1;
+}
+
+.team-card p {
+  color: #0076ff;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.team-card__links {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.team-card__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-green);
+  font-weight: 800;
 }
 
 .about-mission-band {
@@ -942,6 +1015,22 @@ img {
   color: var(--light-green);
 }
 
+.donation-contacts {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.donation-contacts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 800;
+}
+
 .news-grid span {
   display: inline-flex;
   align-items: center;
@@ -978,7 +1067,8 @@ img {
   color: var(--text-main);
 }
 
-.contact-info-grid p {
+.contact-info-grid p,
+.contact-info-grid a {
   color: var(--text-muted);
 }
 
@@ -1286,7 +1376,8 @@ img {
 
   .cause-grid,
   .news-grid,
-  .involvement-page-grid {
+  .involvement-page-grid,
+  .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1450,6 +1541,7 @@ img {
   .cause-grid,
   .news-grid,
   .involvement-page-grid,
+  .team-grid,
   .stat-card-grid,
   .timeline-grid {
     grid-template-columns: 1fr;
@@ -1485,6 +1577,7 @@ img {
 
   .about-story,
   .values-section,
+  .team-section,
   .mission-section,
   .involved-section,
   .page-section,
@@ -1500,5 +1593,10 @@ img {
 
   .contact-form {
     padding: 24px 18px;
+  }
+
+  .donation-contacts {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
