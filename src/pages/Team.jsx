@@ -48,7 +48,7 @@ const Team = () => {
             {teamMembers.map((member) => (
               <article className="team-profile-card" key={member.name}>
                 <div className="team-profile-card__image">
-                  <img src={member.image} alt={member.name} />
+                  <img src={member.image} alt={member.name} loading="eager" decoding="sync" />
                 </div>
                 <h3>{member.name}</h3>
                 <p>{member.role}</p>
