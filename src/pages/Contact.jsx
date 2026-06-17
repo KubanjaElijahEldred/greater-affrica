@@ -1,9 +1,9 @@
-import { MapPin, Phone, Send } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 import { FaInstagram } from 'react-icons/fa';
 
 const contactItems = [
   { icon: MapPin, label: 'Visit us', value: 'Kampala, Uganda' },
-  { icon: Phone, label: 'C.E.O contact', value: '+256 771 964 723', href: 'tel:+256771964723' },
+  { icon: Phone, label: 'Founder contact', value: '+256 771 964 723', href: 'tel:+256771964723' },
   { icon: Phone, label: 'Project contact', value: '+256 778 892 356', href: 'tel:+256778892356' },
   { icon: FaInstagram, label: 'Instagram', value: '@greater__africa_org', href: 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius' },
 ];
@@ -56,27 +56,6 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
-            <div>
-              <label htmlFor="name">Full name</label>
-              <input id="name" type="text" placeholder="Your name" />
-            </div>
-            <div>
-              <label htmlFor="email">Email address</label>
-              <input id="email" type="email" placeholder="you@example.com" />
-            </div>
-            <div>
-              <label htmlFor="subject">Subject</label>
-              <input id="subject" type="text" placeholder="How can we help?" />
-            </div>
-            <div>
-              <label htmlFor="message">Message</label>
-              <textarea id="message" rows="6" placeholder="Write your message" />
-            </div>
-            <button className="btn btn-orange" type="submit">
-              SEND MESSAGE <Send size={17} />
-            </button>
-          </form>
         </div>
       </section>
     </div>

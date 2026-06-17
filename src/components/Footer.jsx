@@ -71,11 +71,7 @@ const Footer = () => {
               <li><Phone size={16} />+256 778 892 356</li>
               <li><FaInstagram size={16} />@greater__africa_org</li>
             </ul>
-            <h3>STAY UPDATED</h3>
-            <form className="newsletter-form" onSubmit={(event) => event.preventDefault()}>
-              <input type="email" placeholder="Enter your email" aria-label="Email address" />
-              <button className="btn btn-orange" type="submit">SUBSCRIBE</button>
-            </form>
+
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import Navbar from './components/Navbar';
@@ -13,6 +13,17 @@ import GetInvolved from './pages/GetInvolved';
 import News from './pages/News';
 import Contact from './pages/Contact';
 import Team from './pages/Team';
+import { ThemeProvider } from './context/ThemeContext';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -30,8 +41,10 @@ function App() {
   }
 
   return (
-    <Router>
-      <Navbar />
+    <ThemeProvider>
+      <Router>
+        <ScrollToTop />
+        <Navbar />
       <AnimatePresence mode="wait">
         <main style={{ minHeight: '80vh' }}>
           <Routes>
@@ -46,8 +59,9 @@ function App() {
           </Routes>
         </main>
       </AnimatePresence>
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 

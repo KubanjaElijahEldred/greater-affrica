@@ -18,6 +18,20 @@
   --transition: all 0.22s ease;
 }
 
+[data-theme='dark'] {
+  --primary-dark: #0a2612;
+  --primary-green: #3a8a4c;
+  --light-green: #7fb85a;
+  --accent-orange: #f7931e;
+  --accent-orange-hover: #f5a63d;
+  --text-main: #f0f1f3;
+  --text-muted: #a7adb6;
+  --bg-warm: #13161a;
+  --white: #1c2026;
+  --border-color: #2f353d;
+  --shadow-soft: 0 18px 48px rgba(0, 0, 0, 0.35);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

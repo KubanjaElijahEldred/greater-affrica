@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Heart, Menu, Search, X } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
+import { Heart, Menu, Moon, Search, Sun, X } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -15,13 +16,13 @@ const navLinks = [
 
 const searchItems = [
   { title: 'Home', path: '/', keywords: 'landing donate mission impact change lives' },
-  { title: 'About Us', path: '/about', keywords: 'story mission values Benita Wei leadership' },
+  { title: 'About Us', path: '/about', keywords: 'story mission values Benita Wiyacungu leadership' },
   { title: 'Our Causes', path: '/causes', keywords: 'education healthcare food security clean water poverty girl child' },
   { title: 'Impact', path: '/impact', keywords: 'lives impacted children educated health programs water projects' },
   { title: 'Get Involved', path: '/get-involved', keywords: 'donate volunteer share fundraise support contact' },
-  { title: 'Team', path: '/team', keywords: 'Benita Kaija Wei Belle CEO project manager co admin' },
+  { title: 'Team', path: '/team', keywords: 'Benita Kaija Wiyacungu Deogratius Founder project manager co admin' },
   { title: 'News', path: '/news', keywords: 'updates stories community articles' },
-  { title: 'Contact', path: '/contact', keywords: 'phone instagram Kampala CEO project contact' },
+  { title: 'Contact', path: '/contact', keywords: 'phone instagram Kampala Founder project contact' },
 ];
 
 const BrandLogo = () => (
@@ -37,6 +38,7 @@ const BrandLogo = () => (
 
 const Navbar = () => {
   const location = useLocation();
+  const { isDark, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -95,6 +97,13 @@ const Navbar = () => {
         <BrandLogo />
         {renderSearch('site-search desktop-search')}
         {renderLinks('site-nav')}
+        <button
+          className="theme-toggle"
+          aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+          onClick={toggleTheme}
+        >
+          {isDark ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
         <Link className="btn btn-orange donate-nav" to="/get-involved">
           <Heart size={16} fill="currentColor" />
           DONATE NOW

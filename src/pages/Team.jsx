@@ -1,20 +1,19 @@
-import { Phone } from 'lucide-react';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const instagramLink = 'https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius';
 
 const teamMembers = [
   {
     name: 'Benita Kaija',
-    role: 'C.E.O',
+    role: 'Founder',
     image: '/images/benita.png',
     instagram: instagramLink,
   },
   {
-    name: 'Wei Belle',
+    name: 'Wiyacungu Deogratius',
     role: 'Project Manager & Co Admin',
     image: '/images/wei.png',
-    contact: '+256 778 892 356',
+    whatsapp: '+256 778 892 356',
     instagram: instagramLink,
   },
 ];
@@ -53,10 +52,10 @@ const Team = () => {
                 <h3>{member.name}</h3>
                 <p>{member.role}</p>
                 <div className="team-profile-card__links">
-                  {member.contact && (
-                    <a href={`tel:${member.contact.replaceAll(' ', '')}`}>
-                      <Phone size={18} />
-                      {member.contact}
+                  {member.whatsapp && (
+                    <a href={`https://wa.me/${member.whatsapp.replaceAll(' ', '').replace('+', '')}`} target="_blank" rel="noreferrer">
+                      <FaWhatsapp size={20} />
+                      {member.whatsapp}
                     </a>
                   )}
                   <a href={member.instagram} target="_blank" rel="noreferrer" aria-label={`${member.name} Instagram`}>

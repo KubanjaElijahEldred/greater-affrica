@@ -1,5 +1,5 @@
 import { ArrowRight, Gift, HandHeart, Handshake, Heart, Phone, Share2 } from 'lucide-react';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const ways = [
   {
@@ -82,9 +82,9 @@ const GetInvolved = () => {
                 <Phone size={18} />
                 Benita Kaija: +256 771 964 723
               </a>
-              <a href="tel:+256778892356">
-                <Phone size={18} />
-                Wei Belle: +256 778 892 356
+              <a href="https://wa.me/256778892356" target="_blank" rel="noreferrer">
+                <FaWhatsapp size={18} />
+                Wiyacungu Deogratius: +256 778 892 356
               </a>
               <a href="https://www.instagram.com/greater__africa_org?igsh=a3FpcWtvZG5xdHQ%3D&utm_source=qrdeogratius" target="_blank" rel="noreferrer">
                 <FaInstagram size={18} />
