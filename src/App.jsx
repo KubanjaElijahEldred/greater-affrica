@@ -13,7 +13,7 @@ import GetInvolved from './pages/GetInvolved';
 import News from './pages/News';
 import Contact from './pages/Contact';
 import Team from './pages/Team';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider } from './context/ThemeProvider';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
